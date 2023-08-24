@@ -1,0 +1,261 @@
+html,body {
+  background-color: transparent;
+  color: black;
+  height: 100%;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(Voyager.otf);
+}
+
+@font-face {
+  font-family: myFont1;
+  src: url(Montserrat.ttf);
+}
+
+@font-face {
+  font-family: myFont2;
+  src: url(PlayfairDisplay.ttf);
+}
+
+@font-face {
+  font-family: myFont3;
+  src: url(ProximaNova.otf);
+}
+
+nav {
+  color: black;
+  font-size: x-large;
+  padding : 5px;
+  font-family: myFont;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+table {
+  max-width: 450px;
+}
+
+main {
+  position: absolute;
+  height: calc(100vh - 56px);
+  width: 100%;
+}
+
+a {
+  color: black;
+  font-size: large;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #7552f6;
+}
+
+a:active {
+  text-decoration: none;
+  color: #7552f6;
+}
+
+a.link {color: black; font-size:small; text-decoration: underline; text-align: center;}
+a.link:link {color: black;}
+a.link:visited {color: black;}
+a.link:hover {color: #7552f6;}
+a.link:active {color: black;}
+
+#resultlink {
+text-align: center;
+margin-top: 25px;
+font-family: myFont1;
+font-size: small;
+}
+#header {
+  font-size: 35px ;
+}
+
+#text-1 {
+  font-family: myFont2;
+  font-size: 40px;
+}
+
+#text-2 {
+  font-family: myFont1;
+  font-size: medium;
+  margin-bottom: 50px;
+}
+
+#result-1 {
+  font-family: myFont2;
+  font-size: 30px;
+}
+
+#result-2 {
+  font-family: myFont2;
+  font-weight: bold ;
+  font-size: 40px;
+  color: green;
+}
+
+#result-3 {
+  font-family: myFont2;
+  font-weight: bold ;
+  font-size: 40px;
+  color: red;
+}
+
+#result-4 {
+  font: myFont1;
+  font-size: medium;
+  color: black;
+}
+
+#logo {
+  height: 30px;
+  width: 30px;
+}
+#background {
+  background: transparent url(../images/background.png);
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: auto;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#textbox {
+  background-color: white;
+  color: black;
+  border: 2px solid;
+  outline: none;
+  border-radius: 10px;
+  height: 300px;
+  width : 600px;
+  resize: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  font-family: myFont1;
+}
+
+#image_url:focus {
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+}
+
+.loader {
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  position: inherit;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #ffffff;
+  animation: an1 1s ease infinite;
+}
+
+@keyframes an1{
+  0%{
+    transform: rotate(0turn);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
+}
+
+.custom-button {
+  background-color: #7552f6;
+  color: white;
+  border: 1px;
+  height: 60x;
+  width : 200px;
+  border-radius: 22px;
+  padding: 6px 20px;
+  font-family: myFont3;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 8px 5px -5px rgba(0,0,0,0.2);
+  display: grid;
+  place-content: center;
+}
+
+.custom-button:focus,
+.custom-button:active,
+.custom-button:hover {
+  outline: none;
+  opacity: 0.6;
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+  color: white;
+  background-color: #7552f6;
+}
+
+.result-label {
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  padding: 6px 15px;
+  font-size: large;
+  font-weight: bold;
+  white-space: nowrap;
+  margin: 5px;
+}
+
+#file-label {
+  position: absolute;
+  top: 0;
+  right: calc(50% - 100px);
+  width: 200px;
+  padding: 6px 20px;
+  z-index: 5;
+}
+
+#aboutProject {
+  width: calc(min(100%, 450px));
+}
+
+#image-section {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+#know_more a {
+  font-size: medium;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-width: 2px;
+}

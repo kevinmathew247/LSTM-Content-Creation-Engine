@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block main %}
+<div class="container-fluid h-100 p-0">
+  <div class="row h-100 w-100 align-items-center m-0">
+    <div class="col-12">
+      <div class="hometext">
+        <p style="text-align:center" id="result-1">Your content has been screened and here are the results</p>
+      </div>
+
+      <div class="hometext">
+        <p style="text-align:center" id="result-2">{{ safe_message }}</p>
+      </div>
+      <div class="hometext">
+        <p style="text-align:center" id="result-3">{{ unsafe_message }}</p>
+      </div>
+      <div class="hometext">
+        <p style="text-align:center" id="result-4">{{ result_text }}</p>
+      </div>
+      <table>
+          <tr>
+              <th>Class Name</th>
+              <th>Predicted Value(in %)</th>
+          </tr>
+          {% for class_name, predicted_value in predictions_dict.items() %}
+          <tr>
+              <td>{{ class_name }}</td>
+              <td>{{ predicted_value }}%</td>
+          </tr>
+          {% endfor %}
+      </table>
+      <div id= "resultlink" class="hometext">
+        <a class="link" href="https://www.report-it.org.uk/reporting_internet_hate_crime" style="text-align:center">Read more about online
+           hate speech and how to report it.</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

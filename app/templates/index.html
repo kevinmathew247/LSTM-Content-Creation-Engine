@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block main %}
+<head>
+  <link rel = "stylesheet" type = "text/css" href = "/static/css/styles.css" />
+  <script type="text/javascript" src="/static/js/scripts.js"></script>
+</head>
+<div class="container-fluid h-100 p-0">
+  <div class="row h-100 w-100 align-items-center m-0">
+    <div class="col-12">
+      <form action="/submit" method="post" enctype="multipart/form-data">
+
+        <div id="loader" style="display:none" img src="/static/images/1475.png" class="col-12 d-flex justify-content-center mb-2">
+        </div>
+        <div class="hometext">
+          <p style="text-align:center" id="text-1">Be safer and smarter while creating content</p>
+        </div>
+
+        <div class="hometext">
+          <p style="text-align:center" id="text-2">BeSafe is a content creation and screening engine 
+            which helps you discover hate speech<br>
+            in your content and reduce your online exposure to minimize digital risks</p>
+        </div>
+
+        <div class="my-text-form col-12 d-flex justify-content-center mb-4">
+          <textarea id="textbox" input="text" name="textbox" id="textbox" rows="6" cols="50" placeholder="Paste your content here"></textarea>
+        </div></br>
+        <div class="my-text-form col-12 d-flex justify-content-center">
+          <button type="submit" class="custom-button">Screen content</button>
+          <div class="loader"></div>
+        </div>   
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  custom_button = document.querySelector(".custom-button");
+  custom_button.onclick = function() {
+    this.innerHTML = "<div class='loader'></div>";
+    setTimeout(() => {
+      this.innerHTML = "Loading results"
+    }, 2000);
+  }
+</script>
+{% endblock %}

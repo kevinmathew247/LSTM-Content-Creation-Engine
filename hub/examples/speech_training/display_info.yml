@@ -1,0 +1,17 @@
+toxic:
+  Message : This is toxic
+
+severelytoxic:
+  Message : This is severely toxic
+
+obscene:
+  Message : This is obscene
+
+threat:
+  Message : This is threat
+
+insult:
+  Message : This is insult
+
+identityhate:
+  Message : This is identity hate
